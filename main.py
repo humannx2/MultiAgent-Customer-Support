@@ -11,8 +11,11 @@ crew = Crew(
 
 inputs={
     "user":"Aditya",
-    "query":"Can you help me understand what Social Hardware does?",
+    "query":"Can you help me understand what Social Hardware does?"
 }
 
-result=crew.kickoff(inputs=inputs)
-print(result)
+try:
+    result = crew.kickoff(inputs=inputs)
+    print(result)
+except ValueError as e:
+    print(f"Error: {e}")

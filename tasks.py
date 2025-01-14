@@ -37,7 +37,7 @@ quality_assurance_review = Task(
         "Check for references and sources used to "
         " find the information, "
 		"ensuring the response is well-supported and "
-        "leaves no questions unanswered."
+        "leaves no questions unanswered. Donot make assumptions, base your answer strictly on what's available on the website"
     ),
     expected_output=(
         "A final, detailed, and informative response "
@@ -48,5 +48,6 @@ quality_assurance_review = Task(
 		"Don't be too formal, we are a chill and cool company "
 	    "but maintain a professional and friendly tone throughout."
     ),
+    tools=[docs_scrape_tool],
     agent=qa_agent,
 )

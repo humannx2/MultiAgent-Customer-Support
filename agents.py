@@ -15,7 +15,8 @@ support_agent=Agent(
     "Make sure you provide detailed answers and make no assumptions."
     "Incase the information is unavailable you will ask {user} to contact at the helpline number to schedule a meeting for personalized discussion"),
     allow_delegation=False,
-    verbose=True
+    verbose=True,
+    llm=llm
 )
 
 qa_agent=Agent(
@@ -27,5 +28,6 @@ qa_agent=Agent(
     "Make sure you provide detailed answers and make no assumptions."
     "Incase the information is unavailable you will ask {user} to contact at the helpline number to schedule a meeting for personalized discussion"),
     allow_delegation=True,
-    verbose=True
+    verbose=True,
+    llm=llm
 )
